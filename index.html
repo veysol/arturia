@@ -33,8 +33,25 @@
 </div>
       <div class="content">
 <body>
-<audio autoplay loop playsinline>
-  <source src="i27HMmzjyNv9.128.mp3" type="audio/mpeg" autostart="true" loop="true" hidden="true">
+  <div class="player">
+	<div id="info" class="info">
+		<span class="artist">Flume</span>
+		<span class="name">Say it</span>
+		<div class="progress-bar">
+			<div class="bar"></div>
+		</div>
+	</div>
+	<div id="control-panel" class="control-panel">
+		<div class="album-art"></div>
+		<div class="controls">
+			<div class="prev"></div>
+			<div id="play" class="play"></div>
+			<div class="next"></div>
+		</div>
+	</div>
+</div>
+<audio loop playsinline>
+  <source src="i27HMmzjyNv9.128.mp3" type="audio/mpeg" autostart="false" loop="true" hidden="true">
     <input type="button" value="Play" onclick="document.i27HMmzjyNv9.128.play()">
 Your browser does not support the audio element.
 </audio>
