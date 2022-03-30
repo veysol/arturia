@@ -2,34 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Arturia</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="title" content="Arturia">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Arturia">
-    <meta name="apple-mobile-web-app-title" content="Arturia">
-    <meta name="twitter:title" content="Arturia">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <!-- Icon -->
-    <link rel="icon" type="image/png" href="https://github.com/veysol/veysol.github.io/index_files/image.jpg">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#000000">
-    <!-- Description -->
-    <meta name="description" content="community">
-    <meta property="og:description" content="community">
-    <meta name="twitter:description" content="community">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <!-- Minecraft -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
     <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Grid</title>
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
     <style>
+        @import url('./base.css');
         @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
         @import url(https://fonts.googleapis.com/css?family=Ubuntu);
         @media screen and (orientation:landscape) {
@@ -92,7 +71,6 @@
             -webkit-user-select: none;
             -ms-user-select: none
         }
-
         li,
         ul {
             margin-left: 0;
@@ -142,22 +120,42 @@
         }
         header {
             font-family: 'share tech mono', monospace;
-            position: fixed;
-            display: block;
             margin-top: 50px;
-            width: 100%;
+            position: fixed;
             top: 0;
             left: 0;
+            width: 100%;
+            float: top;
         }
         footer {
             font-family: 'share tech mono', monospace;
             font-size: 12px;
             font-weight: 700;
-            position: fixed;
             width: 100%;
+            position: fixed;
             bottom: 0;
             left: 0;
             float: bottom;
+        }
+        .gallery {
+          max-height: 70vh;
+          padding-top: 15%;
+          padding-bottom: 15%;
+          float: center;
+        }
+        .gallery img{
+          margin: 5px;
+          width:auto;
+          height:auto;
+          max-width:200px;
+          max-height:90vh;
+          filter: grayscale(100%);
+          border-radius: 10px;
+          transition: 500ms;
+        }
+        .gallery img:hover{
+          filter: grayscale(0%);
+          transform: scale(1.020);
         }
     </style>
 </head>
@@ -169,22 +167,16 @@
                   <header>
                     <h1>arturia</h1>
                         <br>
-                        <a href="https://arturia.one/gallery.html">gallery</a> | <a href="http://map.arturia.one">map</a> | <a href="http://discord.arturia.one">discord</a>
+                         <a href="https://arturia.one">home</a> | <a href="http://map.arturia.one">map</a> | <a href="http://discord.arturia.one">discord</a>
                     </p>
                   </header>
-                    <div id="java">
-                      <p style="font-size:15px"> play.arturia.one</p>
-                      <p style="font-size:11px">
-                          status | <span data-playercounter-ip="play.arturia.one" data-playercounter-status>...</span>
-                        </p>
-                        <p style="font-size:11px" style="padding: 100px" >
-                        players | <span data-playercounter-ip="play.arturia.one">0</span>
-                      </p>
-                    <p>
-                    </p>
-                    <footer>
-                      <p> made with ♡ by tom
-                    </footer>
+                    <div class="gallery">
+                      <a href="images/1.jpg" data-lightbox="gallery" data-title="test picture"><img src="images/1.jpg"></a>
+                      <a href="images/2.jpg" data-lightbox="gallery" data-title="test picture"><img src="images/2.jpg"></a>
+                    </div>
+                  <footer>
+                    <p> made with ♡ by tom
+                  </footer>
                 </body>
               </div>
           </section>
